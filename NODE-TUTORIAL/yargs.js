@@ -41,6 +41,8 @@ if (arg2 == 'add') {
 } else if (arg2 === 'multiply') {
     let result = calc.multiply(arg3, arg4);
     console.log(result);
+} else {
+    console.log("I don't understand what you have input");
 }
 // command : node yargs add 3 4
 // 7 
@@ -49,3 +51,4 @@ if (arg2 == 'add') {
 // 블록체인 기술처럼 은행을 만드는 것임  
 // 5천명의 은행계좌를 만들고, 활성화시키고자 할 때, 은행이용자를 추가하고 빼고 할때, 
 // process 보단 yargs 를 쓴다. 
+
