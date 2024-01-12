@@ -67,13 +67,49 @@ console.log("Hi, i am child")
 
 
 // 2. 자식 파일에서 부모 파일로 name 가져오기   
-module.exports.name = 'Jupeter';
-module.exports.add = (a,b) =>{
+//module.exports.name = 'Jupeter';
+//module.exports.add = (a,b) =>{
+//    return a + b;
+//};
+//module.exports.substract = (a,b) =>{
+//    return a - b;
+//};
+//module.exports.multiply = (a,b) =>{
+//    return a * b;
+//};
+
+// module.exports 반복되니깐, 간단하게 만들어보기
+
+let add = (a,b) => {
     return a + b;
 };
-module.exports.substract = (a,b) =>{
+
+let substract = (a,b) => {
     return a - b;
 };
-module.exports.multiply = (a,b) =>{
+
+let multiply = (a, b) => {
     return a * b;
 };
+
+let divide = (a, b) => {
+    return a/b;
+};
+
+// object 를 담는다. 
+
+module.exports = {
+    add: add,
+    substract: substract,
+    multiply: multiply,
+    divide: divide
+}
+// 위에 key와 value 가 같을 경우, 하나로만 써도 됨 
+
+// 또는 es6 방식
+//export const add = add;
+//export const substract = substract;
+//export const multiply = multiply;
+//export const divide = divide;
+
+// command : node yargs_2 add --a=3 --b=4
